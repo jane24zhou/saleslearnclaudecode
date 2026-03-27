@@ -13,25 +13,25 @@
 }
 
 :root {
-  /* Budapest Hotel Pink & Blue Palette */
-  --pink-light: #fde6e9;
-  --pink-medium: #f9b5c4;
-  --pink-accent: #e85d75;
-  --pink-dark: #d63865;
+  /* Budapest Hotel Pink & Blue Palette - Lightened */
+  --pink-light: #fff5f7;
+  --pink-medium: #ffd4df;
+  --pink-accent: #ff99b3;
+  --pink-dark: #ff6b8f;
 
-  --blue-light: #e6f2ff;
-  --blue-medium: #a8d5ff;
-  --blue-accent: #5ba3e0;
-  --blue-dark: #2e7cbf;
+  --blue-light: #f0f8ff;
+  --blue-medium: #d4e9ff;
+  --blue-accent: #87ceeb;
+  --blue-dark: #5ba3d0;
 
-  --cream: #fef8f0;
-  --gold: #d4af37;
-  --burgundy: #8b2635;
-  --teal: #4fb3a0;
+  --cream: #fffcf7;
+  --gold: #f4d58d;
+  --burgundy: #c75b6f;
+  --teal: #7dd3c0;
 
-  --text-primary: #2c1810;
-  --text-secondary: #6b5d56;
-  --border-color: #e8d5c4;
+  --text-primary: #4a4a4a;
+  --text-secondary: #8b8b8b;
+  --border-color: #f0e6dc;
 
   --font-display: 'Playfair Display', serif;
   --font-body: 'Poppins', sans-serif;
@@ -51,13 +51,13 @@ body {
 
 /* ===== Header (Budapest Hotel Style) ===== */
 .site-header {
-  background: linear-gradient(135deg, var(--pink-accent) 0%, var(--burgundy) 100%);
+  background: linear-gradient(135deg, var(--pink-medium) 0%, var(--pink-accent) 100%);
   color: #fff;
   padding: 3rem 2rem 2.5rem;
   text-align: center;
   position: relative;
   border-bottom: 6px solid var(--gold);
-  box-shadow: var(--shadow-strong);
+  box-shadow: var(--shadow-soft);
 }
 
 .header-ornament {
@@ -691,7 +691,7 @@ body {
 
 /* ===== Footer ===== */
 .site-footer {
-  background: linear-gradient(135deg, var(--burgundy) 0%, var(--pink-dark) 100%);
+  background: linear-gradient(135deg, var(--pink-accent) 0%, var(--pink-medium) 100%);
   color: white;
   text-align: center;
   padding: 2.5rem 2rem;
@@ -720,6 +720,168 @@ body {
 /* ===== Utility ===== */
 .hidden {
   display: none !important;
+}
+
+/* ===== Terminal Simulator ===== */
+.terminal-container {
+  background: white;
+  border: 4px solid var(--blue-accent);
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: var(--shadow-medium);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.terminal-header {
+  background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-accent) 100%);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ff6b6b; }
+.terminal-dot.yellow { background: #ffd93d; }
+.terminal-dot.green { background: #6bcf7f; }
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.terminal-body {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  min-height: 300px;
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.terminal-line {
+  margin-bottom: 0.5rem;
+}
+
+.terminal-prompt {
+  color: #4ec9b0;
+  font-weight: bold;
+}
+
+.terminal-command {
+  color: #dcdcaa;
+}
+
+.terminal-output {
+  color: #ce9178;
+  margin-left: 0;
+}
+
+.terminal-success {
+  color: #6bcf7f;
+}
+
+.terminal-error {
+  color: #f48771;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #d4d4d4;
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  color: #dcdcaa;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  outline: none;
+  flex: 1;
+  caret-color: #d4d4d4;
+}
+
+.terminal-suggestions {
+  background: #252526;
+  border: 1px solid #454545;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+
+.terminal-suggestions h4 {
+  color: #4ec9b0;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.terminal-suggestions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.terminal-suggestions li {
+  color: #d4d4d4;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.terminal-suggestions li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #4ec9b0;
+}
+
+.bilingual {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.en {
+  color: var(--text-primary);
+}
+
+.zh {
+  color: var(--text-secondary);
+  font-size: 0.9em;
 }
 
 /* ===== Responsive Design ===== */
