@@ -7,18 +7,18 @@ const STORAGE_KEY = "github_learning_progress";
 
 // ---- GitHub Concept Flashcards Data ----
 const flashcardsData = [
-  { term: "Repository", definition: "A storage space for your project containing all files, folders, and version history. Think of it as a project folder with superpowers!" },
-  { term: "Commit", definition: "A snapshot of your project at a specific point in time. It's like saving your game progress - you can always go back to this point." },
-  { term: "Branch", definition: "A parallel version of your repository. It allows you to work on features without affecting the main codebase, like having multiple save files." },
-  { term: "Pull Request", definition: "A request to merge your changes into another branch. It's where code review happens and team collaboration shines!" },
-  { term: "Fork", definition: "A personal copy of someone else's repository. You can experiment freely without affecting the original project." },
-  { term: "Clone", definition: "Downloading a repository to your local computer so you can work on it offline. Like downloading a file from the cloud." },
-  { term: "Push", definition: "Uploading your local commits to a remote repository on GitHub. It's like syncing your work to the cloud." },
-  { term: "Pull", definition: "Downloading changes from a remote repository to your local machine. Keeps your local copy up-to-date with others' work." },
-  { term: "Merge", definition: "Combining changes from different branches into one. It's how teams integrate everyone's work together." },
-  { term: "Issue", definition: "A way to track bugs, enhancements, or tasks. Think of it as a smart to-do list for your project." },
-  { term: "Actions", definition: "GitHub's automation tool that runs workflows like testing, building, and deploying your code automatically." },
-  { term: "README", definition: "The front page of your repository. It explains what your project does and how to use it - make it shine! ✨" }
+  { term: "Repository / 仓库", definition: "A storage space for your project containing all files, folders, and version history. Think of it as a project folder with superpowers! / 包含所有文件、文件夹和版本历史的项目存储空间。就像一个具有超能力的项目文件夹！" },
+  { term: "Commit / 提交", definition: "A snapshot of your project at a specific point in time. It's like saving your game progress - you can always go back to this point. / 项目在特定时间点的快照。就像保存游戏进度，你可以随时回到这个点。" },
+  { term: "Branch / 分支", definition: "A parallel version of your repository. It allows you to work on features without affecting the main codebase, like having multiple save files. / 仓库的并行版本。允许你在不影响主代码库的情况下开发功能，就像有多个存档文件。" },
+  { term: "Pull Request / 拉取请求", definition: "A request to merge your changes into another branch. It's where code review happens and team collaboration shines! / 将你的更改合并到另一个分支的请求。这里是代码审查和团队协作的舞台！" },
+  { term: "Fork / 复刻", definition: "A personal copy of someone else's repository. You can experiment freely without affecting the original project. / 他人仓库的个人副本。你可以自由实验而不影响原始项目。" },
+  { term: "Clone / 克隆", definition: "Downloading a repository to your local computer so you can work on it offline. Like downloading a file from the cloud. / 将仓库下载到本地计算机以便离线工作。就像从云端下载文件。" },
+  { term: "Push / 推送", definition: "Uploading your local commits to a remote repository on GitHub. It's like syncing your work to the cloud. / 将本地提交上传到GitHub远程仓库。就像将工作同步到云端。" },
+  { term: "Pull / 拉取", definition: "Downloading changes from a remote repository to your local machine. Keeps your local copy up-to-date with others' work. / 从远程仓库下载更改到本地机器。保持本地副本与他人工作同步。" },
+  { term: "Merge / 合并", definition: "Combining changes from different branches into one. It's how teams integrate everyone's work together. / 将不同分支的更改合并为一个。这是团队整合所有人工作的方式。" },
+  { term: "Issue / 问题", definition: "A way to track bugs, enhancements, or tasks. Think of it as a smart to-do list for your project. / 跟踪错误、增强功能或任务的方式。可以把它看作项目的智能待办事项列表。" },
+  { term: "Actions / 动作", definition: "GitHub's automation tool that runs workflows like testing, building, and deploying your code automatically. / GitHub的自动化工具，可自动运行测试、构建和部署代码等工作流。" },
+  { term: "README", definition: "The front page of your repository. It explains what your project does and how to use it - make it shine! ✨ / 仓库的首页。它解释项目的功能和使用方法 - 让它闪耀吧！✨" }
 ];
 
 // ---- Quiz Questions ----
@@ -198,6 +198,7 @@ function init() {
   renderWorkflow(0);
   renderProgress();
   setupEventListeners();
+  initTerminal();
 }
 
 // ---- Event Listeners ----
@@ -463,4 +464,157 @@ function loadProgress() {
   } catch (e) {
     return {};
   }
+}
+
+// ---- Terminal Simulator ----
+const terminalCommands = {
+  help: {
+    output: `Available commands / 可用命令:
+  git status   - Show repository status / 显示仓库状态
+  git log      - Show commit history / 显示提交历史
+  git branch   - List branches / 列出分支
+  git add      - Stage files / 暂存文件
+  git commit   - Commit changes / 提交更改
+  git push     - Push to remote / 推送到远程
+  git pull     - Pull from remote / 从远程拉取
+  ls           - List files / 列出文件
+  pwd          - Print working directory / 打印当前目录
+  clear        - Clear terminal / 清空终端
+  help         - Show this help / 显示此帮助`,
+    type: 'output'
+  },
+  'git status': {
+    output: `On branch main / 在 main 分支上
+Your branch is up to date with 'origin/main'.
+你的分支与 'origin/main' 一致。
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  未暂存以备提交的变更：
+  （使用 "git add <file>..." 更新要提交的内容）
+
+    modified:   index.html
+    modified:   styles.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）`,
+    type: 'output'
+  },
+  'git log': {
+    output: `commit a1b2c3d4e5f6g7h8i9j0 (HEAD -> main, origin/main)
+Author: GitHub Learner <learner@github.com>
+Date:   Thu Mar 27 2026
+
+    Add bilingual support and terminal feature
+    添加双语支持和终端功能
+
+commit 9z8y7x6w5v4u3t2s1r0q
+Author: GitHub Learner <learner@github.com>
+Date:   Wed Mar 26 2026
+
+    Update color scheme to lighter Budapest Hotel palette
+    更新为更亮的布达佩斯饭店配色方案`,
+    type: 'output'
+  },
+  'git branch': {
+    output: `* main
+  feature/terminal
+  feature/bilingual`,
+    type: 'success'
+  },
+  'git add .': {
+    output: 'Files staged successfully! / 文件暂存成功！',
+    type: 'success'
+  },
+  'git commit -m "update"': {
+    output: `[main a1b2c3d] update
+ 2 files changed, 145 insertions(+), 23 deletions(-)
+
+✓ Commit created successfully! / 提交创建成功！`,
+    type: 'success'
+  },
+  'git push': {
+    output: `Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 892 bytes | 892.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/yourname/yourrepo.git
+   9z8y7x6..a1b2c3d  main -> main
+
+✓ Push successful! / 推送成功！`,
+    type: 'success'
+  },
+  'git pull': {
+    output: `Already up to date. / 已经是最新的。`,
+    type: 'success'
+  },
+  ls: {
+    output: `index.html
+styles.css
+app.js
+README.md
+.git/`,
+    type: 'output'
+  },
+  pwd: {
+    output: '/home/user/github-learning-journey',
+    type: 'output'
+  },
+  clear: {
+    output: '',
+    type: 'clear'
+  }
+};
+
+function initTerminal() {
+  const terminalInput = document.getElementById('terminal-input');
+  const terminalOutput = document.getElementById('terminal-output');
+
+  if (!terminalInput) return;
+
+  terminalInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const command = terminalInput.value.trim();
+      if (command) {
+        executeCommand(command);
+        terminalInput.value = '';
+      }
+    }
+  });
+}
+
+function executeCommand(command) {
+  const terminalOutput = document.getElementById('terminal-output');
+  const terminalBody = document.getElementById('terminal-body');
+
+  // Add command to output
+  const commandLine = document.createElement('div');
+  commandLine.className = 'terminal-line';
+  commandLine.innerHTML = `<span class="terminal-prompt">user@github:~$</span> <span class="terminal-command">${command}</span>`;
+  terminalOutput.appendChild(commandLine);
+
+  // Execute command
+  const cmd = terminalCommands[command];
+
+  if (cmd) {
+    if (cmd.type === 'clear') {
+      terminalOutput.innerHTML = '';
+    } else {
+      const outputLine = document.createElement('div');
+      outputLine.className = 'terminal-line';
+      outputLine.innerHTML = `<span class="terminal-${cmd.type}">${cmd.output}</span>`;
+      terminalOutput.appendChild(outputLine);
+    }
+  } else {
+    const errorLine = document.createElement('div');
+    errorLine.className = 'terminal-line';
+    errorLine.innerHTML = `<span class="terminal-error">Command not found: ${command}
+Type 'help' for available commands
+命令未找到: ${command}
+输入 'help' 查看可用命令</span>`;
+    terminalOutput.appendChild(errorLine);
+  }
+
+  // Scroll to bottom
+  terminalBody.scrollTop = terminalBody.scrollHeight;
 }

@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Learning Journey <�</title>
+  <title>GitHub Learning Journey / GitHub 学习之旅</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="header-ornament"></div>
-    <h1><� GitHub Learning Journey</h1>
-    <p class="subtitle">Master GitHub with interactive lessons, quizzes, and AI-powered workflows</p>
+    <h1>🎓 GitHub Learning Journey / GitHub 学习之旅</h1>
+    <p class="subtitle">Master GitHub with interactive lessons, quizzes, and AI-powered workflows<br>通过互动课程、测验和AI驱动的工作流程掌握GitHub</p>
     <div class="header-ornament bottom"></div>
   </header>
 
   <!-- Navigation -->
   <nav class="main-nav">
-    <button class="nav-btn active" data-section="flashcards">=� Flashcards</button>
-    <button class="nav-btn" data-section="quiz"><� Quiz</button>
-    <button class="nav-btn" data-section="workflow">=� AI Workflow</button>
-    <button class="nav-btn" data-section="progress">P Progress</button>
+    <button class="nav-btn active" data-section="flashcards">📚 Flashcards / 卡片</button>
+    <button class="nav-btn" data-section="quiz">📝 Quiz / 测验</button>
+    <button class="nav-btn" data-section="terminal">💻 Terminal / 终端</button>
+    <button class="nav-btn" data-section="workflow">🚀 AI Workflow / 工作流</button>
+    <button class="nav-btn" data-section="progress">📊 Progress / 进度</button>
   </nav>
 
   <div class="container">
@@ -28,8 +29,8 @@
     <!-- Flashcards Section -->
     <section id="flashcards-section" class="content-section active">
       <div class="section-header">
-        <h2>=� GitHub Concept Cards</h2>
-        <p>Click any card to reveal its explanation</p>
+        <h2>📚 GitHub Concept Cards / GitHub 概念卡片</h2>
+        <p>Click any card to reveal its explanation / 点击任何卡片查看其解释</p>
       </div>
 
       <div class="flashcards-grid" id="flashcards-container">
@@ -40,8 +41,8 @@
     <!-- Quiz Section -->
     <section id="quiz-section" class="content-section">
       <div class="section-header">
-        <h2><� Test Your Knowledge</h2>
-        <p>Answer questions to level up your GitHub skills</p>
+        <h2>📝 Test Your Knowledge / 测试你的知识</h2>
+        <p>Answer questions to level up your GitHub skills / 回答问题提升你的GitHub技能</p>
       </div>
 
       <div class="quiz-container">
@@ -59,15 +60,60 @@
           </div>
           <div class="quiz-feedback hidden" id="quiz-feedback">
             <p class="feedback-text"></p>
-            <button class="btn btn-next" id="next-question-btn">Next Question �</button>
+            <button class="btn btn-next" id="next-question-btn">Next Question ➜</button>
           </div>
         </div>
 
         <div class="quiz-result hidden" id="quiz-result">
-          <div class="result-icon"><�</div>
-          <h3 class="result-title">Quiz Complete!</h3>
-          <p class="result-score">You scored <span id="final-score">0</span> out of <span id="final-total">5</span></p>
-          <button class="btn btn-restart" id="restart-quiz-btn">Try Again =</button>
+          <div class="result-icon">🎉</div>
+          <h3 class="result-title">Quiz Complete! / 测验完成！</h3>
+          <p class="result-score">You scored / 你的得分 <span id="final-score">0</span> out of <span id="final-total">5</span></p>
+          <button class="btn btn-restart" id="restart-quiz-btn">Try Again 🔄</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal-section" class="content-section">
+      <div class="section-header">
+        <h2>💻 Interactive Terminal / 交互式终端</h2>
+        <p>Experience coding in a real terminal environment / 在真实的终端环境中体验编码</p>
+      </div>
+
+      <div class="terminal-container">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <div class="terminal-dot red"></div>
+            <div class="terminal-dot yellow"></div>
+            <div class="terminal-dot green"></div>
+          </div>
+          <div class="terminal-title">bash - GitHub Learning Terminal</div>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-line">
+            <span class="terminal-success">Welcome to GitHub Learning Terminal! / 欢迎来到GitHub学习终端！</span>
+          </div>
+          <div class="terminal-line">
+            <span class="terminal-output">Type 'help' to see available commands / 输入 'help' 查看可用命令</span>
+          </div>
+          <div class="terminal-line">
+            <span class="terminal-output">─────────────────────────────────────────</span>
+          </div>
+          <div id="terminal-output"></div>
+          <div class="terminal-input-line">
+            <span class="terminal-prompt">user@github:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" autofocus autocomplete="off">
+          </div>
+          <div class="terminal-suggestions">
+            <h4>💡 Try these commands / 尝试这些命令:</h4>
+            <ul>
+              <li>git status - Check repository status / 检查仓库状态</li>
+              <li>git log - View commit history / 查看提交历史</li>
+              <li>git branch - List branches / 列出分支</li>
+              <li>help - Show all commands / 显示所有命令</li>
+              <li>clear - Clear terminal / 清空终端</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -75,21 +121,21 @@
     <!-- Workflow Comparison Section -->
     <section id="workflow-section" class="content-section">
       <div class="section-header">
-        <h2>=� GitHub Workflow: Before & After AI</h2>
-        <p>See how AI transforms the developer experience</p>
+        <h2>🚀 GitHub Workflow: Before & After AI / AI前后的GitHub工作流</h2>
+        <p>See how AI transforms the developer experience / 了解AI如何改变开发体验</p>
       </div>
 
       <div class="workflow-selector">
-        <button class="scenario-btn active" data-scenario="0">=� Creating a Feature</button>
-        <button class="scenario-btn" data-scenario="1">= Fixing a Bug</button>
-        <button class="scenario-btn" data-scenario="2">=� Code Review</button>
+        <button class="scenario-btn active" data-scenario="0">🎯 Creating a Feature / 创建功能</button>
+        <button class="scenario-btn" data-scenario="1">🐛 Fixing a Bug / 修复错误</button>
+        <button class="scenario-btn" data-scenario="2">👀 Code Review / 代码审查</button>
       </div>
 
       <div class="workflow-comparison" id="workflow-comparison">
         <div class="workflow-column before">
           <div class="workflow-header">
-            <h3>� Before AI</h3>
-            <span class="time-badge" id="time-before">~2 hours</span>
+            <h3>⏰ Before AI / AI之前</h3>
+            <span class="time-badge" id="time-before">~2 hours / 约2小时</span>
           </div>
           <div class="workflow-steps" id="steps-before">
             <!-- Steps will be dynamically inserted -->
@@ -102,8 +148,8 @@
 
         <div class="workflow-column after">
           <div class="workflow-header">
-            <h3>( With AI (Claude Code)</h3>
-            <span class="time-badge ai" id="time-after">~20 minutes</span>
+            <h3>⚡ With AI (Claude Code) / 使用AI</h3>
+            <span class="time-badge ai" id="time-after">~20 minutes / 约20分钟</span>
           </div>
           <div class="workflow-steps" id="steps-after">
             <!-- Steps will be dynamically inserted -->
@@ -115,30 +161,30 @@
     <!-- Progress Section -->
     <section id="progress-section" class="content-section">
       <div class="section-header">
-        <h2>P Your Learning Progress</h2>
-        <p>Track your journey to GitHub mastery</p>
+        <h2>📊 Your Learning Progress / 你的学习进度</h2>
+        <p>Track your journey to GitHub mastery / 追踪你的GitHub学习之旅</p>
       </div>
 
       <div class="progress-stats">
         <div class="stat-card">
-          <div class="stat-icon">=�</div>
+          <div class="stat-icon">📚</div>
           <div class="stat-value" id="cards-viewed">0</div>
-          <div class="stat-label">Cards Reviewed</div>
+          <div class="stat-label">Cards Reviewed / 已复习卡片</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><�</div>
+          <div class="stat-icon">📝</div>
           <div class="stat-value" id="quiz-score">0%</div>
-          <div class="stat-label">Quiz Score</div>
+          <div class="stat-label">Quiz Score / 测验得分</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">P</div>
+          <div class="stat-icon">📊</div>
           <div class="stat-value" id="level">1</div>
-          <div class="stat-label">Current Level</div>
+          <div class="stat-label">Current Level / 当前等级</div>
         </div>
       </div>
 
       <div class="achievements">
-        <h3><� Achievements</h3>
+        <h3>🏆 Achievements / 成就</h3>
         <div class="achievement-grid" id="achievements-grid">
           <!-- Achievements will be dynamically inserted -->
         </div>
@@ -150,8 +196,8 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-ornament"></div>
-    <p>Built with d for GitHub learners everywhere</p>
-    <p class="footer-credit">Inspired by The Grand Budapest Hotel aesthetic</p>
+    <p>Built with ❤️ for GitHub learners everywhere / 为全球GitHub学习者用心打造</p>
+    <p class="footer-credit">Inspired by The Grand Budapest Hotel aesthetic / 灵感来自《布达佩斯大饭店》</p>
   </footer>
 
   <script src="app.js"></script>
