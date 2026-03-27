@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Fridge Magnet Collection</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="header-icon">🧲</span>
+      <div>
+        <h1>My Fridge Magnet Collection</h1>
+        <p class="tagline">Every magnet holds a memory. Hover to peek — click to read the story.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── FILTER BAR ── -->
+  <nav class="filter-bar" aria-label="Filter magnets by category">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="travel">✈️ Travel</button>
+    <button class="filter-btn" data-filter="food">🍜 Food</button>
+    <button class="filter-btn" data-filter="gift">🎁 Gift</button>
+    <button class="filter-btn" data-filter="nature">🌿 Nature</button>
+  </nav>
+
+  <!-- ── GALLERY ── -->
+  <main class="gallery" id="gallery">
+
+    <article class="magnet-card" data-category="travel" tabindex="0"
+      data-title="Eiffel Tower, Paris"
+      data-emoji="🗼"
+      data-date="Summer 2019"
+      data-story="I bought this little Eiffel Tower magnet from a tiny souvenir stall tucked beneath the tower itself. It was a rainy Tuesday evening — the kind where the city glows a soft amber through the mist. My friend and I had just shared a crêpe under a shared umbrella. The vendor wrapped it in tissue paper and told us, in broken English, 'It brings you back.' He was right. Every time I glance at it on the fridge, I can smell the rain on the cobblestones.">
+      <div class="magnet-face">
+        <span class="magnet-emoji">🗼</span>
+        <div class="magnet-label">Paris, France</div>
+      </div>
+      <div class="card-meta">
+        <h2>Eiffel Tower</h2>
+        <p class="card-category">✈️ Travel · Summer 2019</p>
+        <p class="card-preview">A rainy Tuesday evening beneath the tower…</p>
+      </div>
+    </article>
+
+    <article class="magnet-card" data-category="food" tabindex="0"
+      data-title="Ramen Bowl, Tokyo"
+      data-emoji="🍜"
+      data-date="Spring 2022"
+      data-story="This magnet is shaped like a tiny bowl of ramen, complete with a chibi naruto fish cake on top. I found it at Tsukiji Outer Market on a freezing March morning after waiting 40 minutes for a legendary tuna-bowl breakfast. The shop owner was a third-generation vendor who explained that ramen culture in Japan isn't just food — it's architecture, patience, and love. I laughed, paid 400 yen, and have never looked at instant noodles the same way since.">
+      <div class="magnet-face">
+        <span class="magnet-emoji">🍜</span>
+        <div class="magnet-label">Tokyo, Japan</div>
+      </div>
+      <div class="card-meta">
+        <h2>Ramen Bowl</h2>
+        <p class="card-category">🍜 Food · Spring 2022</p>
+        <p class="card-preview">Found after a 40-minute wait at Tsukiji Market…</p>
+      </div>
+    </article>
+
+    <article class="magnet-card" data-category="gift" tabindex="0"
+      data-title="Sunflower, From Grandma"
+      data-emoji="🌻"
+      data-date="Birthday 2020"
+      data-story="My grandmother mailed this sunflower magnet from her garden town in Provence for my birthday during the lockdown year. She said she couldn't come to hug me, so she was sending a piece of sunshine instead. The card that came with it read: 'When you open the fridge for a snack at midnight, remember someone on the other side of the world loves you.' I cried. I still do, sometimes, reading that in my head.">
+      <div class="magnet-face">
+        <span class="magnet-emoji">🌻</span>
+        <div class="magnet-label">Provence, France</div>
+      </div>
+      <div class="card-meta">
+        <h2>Sunflower</h2>
+        <p class="card-category">🎁 Gift · Birthday 2020</p>
+        <p class="card-preview">Mailed by Grandma when she couldn't come in person…</p>
+      </div>
+    </article>
+
+    <article class="magnet-card" data-category="nature" tabindex="0"
+      data-title="Great Barrier Reef"
+      data-emoji="🐠"
+      data-date="December 2018"
+      data-story="Shaped like a clownfish, this magnet came from the gift shop at the Cairns Aquarium, right before we took a boat out to the Great Barrier Reef. Snorkelling over the coral felt like floating through a living cathedral. I was so overwhelmed by the colour that I forgot to breathe through my snorkel. The reef has lost much of its colour since warming seas bleached it, so this tiny orange fish is also a small act of remembering what was.">
+      <div class="magnet-face">
+        <span class="magnet-emoji">🐠</span>
+        <div class="magnet-label">Cairns, Australia</div>
+      </div>
+      <div class="card-meta">
+        <h2>Great Barrier Reef</h2>
+        <p class="card-category">🌿 Nature · December 2018</p>
+        <p class="card-preview">A clownfish reminder of a living cathedral of coral…</p>
+      </div>
+    </article>
+
+    <article class="magnet-card" data-category="travel" tabindex="0"
+      data-title="NYC Yellow Cab"
+      data-emoji="🚕"
+      data-date="New Year's 2023"
+      data-story="Times Square on New Year's Eve looked exactly like every movie — and also nothing like the movies. I was freezing, surrounded by strangers, and inexplicably happy. I bought this yellow cab magnet from a street vendor in a Santa hat at 11:45 PM, fifteen minutes before the ball dropped. He charged me $5 and shook my hand and said 'Happy New Year, buddy.' Sometimes a city can feel like home for exactly one night.">
+      <div class="magnet-face">
+        <span class="magnet-emoji">🚕</span>
+        <div class="magnet-label">New York, USA</div>
+      </div>
+      <div class="card-meta">
+        <h2>NYC Yellow Cab</h2>
+        <p class="card-category">✈️ Travel · New Year's 2023</p>
+        <p class="card-preview">Bought 15 minutes before the ball dropped in Times Square…</p>
+      </div>
+    </article>
+
+    <article class="magnet-card" data-category="food" tabindex="0"
+      data-title="Gelato Cone, Florence"
+      data-emoji="🍦"
+      data-date="Summer 2021"
+      data-story="My rule in Italy: never eat gelato near a tourist landmark — walk two streets away and find the gelateria with no English menu. This pastel gelato-cone magnet came from one such place near the Oltrarno neighbourhood. The old woman behind the counter insisted I try the ricotta-and-fig flavour. I did. I bought three scoops and stood in the narrow street while a cat watched me from a windowsill. That was my best meal in four years of traveling.">
+      <div class="magnet-face">
+        <span class="magnet-emoji">🍦</span>
+        <div class="magnet-label">Florence, Italy</div>
+      </div>
+      <div class="card-meta">
+        <h2>Gelato Cone</h2>
+        <p class="card-category">🍜 Food · Summer 2021</p>
+        <p class="card-preview">Ricotta-and-fig, watched by a cat in a narrow street…</p>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ── STORY MODAL ── -->
+  <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close story">✕</button>
+      <div class="modal-emoji" id="modal-emoji"></div>
+      <h2 class="modal-title" id="modal-title"></h2>
+      <p class="modal-date" id="modal-date"></p>
+      <p class="modal-story" id="modal-story"></p>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p>Built with ❤️ and a lot of wanderlust · <a href="https://github.com/jane24zhou/saleslearnclaudecode" target="_blank" rel="noopener">View on GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
