@@ -1,76 +1,147 @@
-# Sales Learn Claude Code 🚀
+# GitHub Learning Journey 🎓
 
-> A non-technical sales person learning to build software in public — one step at a time.
+> An interactive learning platform for mastering GitHub concepts with style and fun!
 
 ## What is this?
 
-Hi! I'm a sales professional learning to code and build tools with AI assistance (Claude Code). This repo is my **public learning journal** — I share everything here: what I'm building, what I'm learning, my wins, and my mistakes.
+Welcome to the **GitHub Learning Journey** — a beautifully designed, interactive website that teaches GitHub fundamentals through flashcards, quizzes, and real-world workflow comparisons. Inspired by the iconic visual style of Wes Anderson's *The Grand Budapest Hotel*, this site makes learning Git and GitHub delightful and engaging.
 
-**Why build in public?**
-- Accountability to keep going
-- Help other non-technical people see that it's possible
-- Get feedback from the community
-- Document the journey so others can follow it
+## ✨ Features
 
-## What I'm Building
+### 📚 Interactive Flashcards
+- **12 essential GitHub concepts** presented as beautiful, flippable cards
+- Click any card to reveal detailed explanations
+- Track which cards you've reviewed
+- Gorgeous pink-and-blue color scheme
 
-A **Sales Pipeline Tracker** — a simple web app that helps me (and any sales person) keep track of deals, follow-ups, and win rates.
+### 🎯 Knowledge Quiz
+- Test your understanding with 5 carefully crafted questions
+- Instant feedback with explanations for each answer
+- Track your quiz scores and aim for 100%
+- Visual progress bar to see how far you've come
 
-👉 **[Open the app → index.html](./index.html)**
+### 🚀 Before & After AI Workflow Comparison
+See how AI transforms the developer experience with three real scenarios:
+- **Creating a Feature**: From 2 hours to 20 minutes
+- **Fixing a Bug**: From 3 hours to 30 minutes
+- **Code Review**: From 1 hour to 15 minutes
 
-No installation needed. Just open `index.html` in any web browser.
+Compare traditional manual workflows side-by-side with AI-powered workflows using Claude Code.
 
-## Features
+### ⭐ Progress Tracking & Achievements
+- Track cards reviewed and quiz scores
+- Level up as you learn
+- Unlock 5 unique achievements:
+  - 🎯 First Steps
+  - 📚 Card Master
+  - ✏️ Quiz Taker
+  - 💯 Perfect Score
+  - 🚀 Workflow Explorer
 
-- ➕ Add new deals with name, value, and stage
-- 📊 See your pipeline at a glance (Prospect → Qualified → Proposal → Closed Won / Closed Lost)
-- 💰 Track total pipeline value and win rate
-- 🗑️ Remove deals as they close
-- 💾 Data saves automatically in your browser (no server needed)
+## 🎨 Design Philosophy
 
-## How to Use
+This site features a **Grand Budapest Hotel aesthetic** with:
+- Signature pink and blue color palette (#e85d75 & #5ba3e0)
+- Elegant serif fonts (Playfair Display) for headings
+- Gold ornamental accents (#d4af37)
+- Smooth animations and delightful interactions
+- Fully responsive design that works on all devices
 
-1. Download or clone this repo
-2. Open `index.html` in your web browser (Chrome, Firefox, Safari — any works)
-3. Start adding your deals!
+## 🚀 How to Use
 
-```bash
-# If you have git installed:
-git clone https://github.com/jane24zhou/saleslearnclaudecode.git
-cd saleslearnclaudecode
-open index.html   # Mac
-# or double-click index.html in Windows Explorer
-```
+**No installation needed!** Just open the site in any modern web browser:
 
-## Project Structure
+1. **Download or clone this repo:**
+   ```bash
+   git clone https://github.com/jane24zhou/saleslearnclaudecode.git
+   cd saleslearnclaudecode
+   ```
+
+2. **Open `index.html` in your browser:**
+   - Mac: `open index.html`
+   - Windows: Double-click `index.html`
+   - Linux: `xdg-open index.html`
+
+3. **Start learning!**
+   - Browse flashcards to learn concepts
+   - Take the quiz to test your knowledge
+   - Explore AI workflow comparisons
+   - Track your progress and unlock achievements
+
+## 📁 Project Structure
 
 ```
 saleslearnclaudecode/
-├── index.html        # The main app — open this in your browser
-├── style.css         # All the styling / visual design
-├── app.js            # The logic that makes the app work
-├── LEARNING_LOG.md   # My public learning diary
-└── README.md         # This file
+├── index.html        # Main application page
+├── style.css         # Budapest Hotel-inspired styling
+├── app.js            # Interactive functionality and data
+├── README.md         # This file
+└── LEARNING_LOG.md   # Development journey notes
 ```
 
-## Follow the Journey
+## 🛠️ Tech Stack
 
-📓 Check out [LEARNING_LOG.md](./LEARNING_LOG.md) to see how this project evolves over time — including the questions I asked, the mistakes I made, and what I learned.
+| Technology | Purpose | Complexity |
+|------------|---------|------------|
+| **HTML** | Content structure | ⭐ Beginner |
+| **CSS** | Beautiful styling & animations | ⭐⭐ Easy |
+| **JavaScript** | Interactive features | ⭐⭐⭐ Medium |
 
-## Tech Stack
+**Pure vanilla JavaScript** — no frameworks, no build tools, no dependencies. Just files you can read, understand, and modify.
 
-| Technology | What it does | Difficulty |
-|---|---|---|
-| HTML | Structure of the page | ⭐ Beginner |
-| CSS | Makes it look nice | ⭐⭐ Easy |
-| JavaScript | Makes it interactive | ⭐⭐⭐ Medium |
+## 🎓 What You'll Learn
 
-No frameworks. No installations. Just files you can open and read.
+This platform covers essential GitHub concepts including:
+- Repositories, Commits, and Branches
+- Pull Requests and Code Review
+- Forking and Cloning
+- Push and Pull operations
+- Merging strategies
+- Issues and project management
+- GitHub Actions automation
 
-## Contributing / Feedback
+Plus, you'll see **real before/after comparisons** showing how AI tools like Claude Code are revolutionizing development workflows!
 
-I'm learning in public — feedback welcome! Open an [Issue](https://github.com/jane24zhou/saleslearnclaudecode/issues) or drop a comment. Even encouragement helps. 😊
+## 💾 Progress Tracking
+
+Your learning progress is automatically saved in your browser's localStorage, including:
+- Which flashcards you've viewed
+- Your latest quiz score
+- Unlocked achievements
+- Your current level
+
+## 🌟 Perfect For
+
+- **New developers** learning Git and GitHub for the first time
+- **Sales and non-technical folks** wanting to understand developer workflows
+- **Students** looking for an engaging way to study version control
+- **Teams** introducing GitHub to new members
+- **Anyone** who appreciates beautiful, thoughtfully designed learning experiences
+
+## 🎬 Inspiration
+
+The visual design pays homage to Wes Anderson's *The Grand Budapest Hotel* with its:
+- Symmetrical layouts
+- Distinctive pink and blue color palette
+- Ornamental decorative elements
+- Playful yet sophisticated typography
+- Attention to detail in every interaction
+
+## 🤝 Contributing
+
+Found a bug? Have an idea for improvement? Contributions are welcome!
+
+1. Open an [Issue](https://github.com/jane24zhou/saleslearnclaudecode/issues) to discuss changes
+2. Fork the repository
+3. Make your changes
+4. Submit a Pull Request
+
+## 📜 License
+
+Free to use, modify, and share. Built with love for learners everywhere.
 
 ---
 
-*Built with curiosity, Claude Code, and a lot of googling.*
+*Made with ❤️ by a learning enthusiast. Styled with inspiration from The Grand Budapest Hotel. Powered by curiosity and Claude Code.*
+
+👉 **[Start Learning Now →](./index.html)**
