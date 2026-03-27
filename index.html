@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Pipeline Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>📊 Sales Pipeline Tracker</h1>
+      <p class="subtitle">Built in public by a sales person learning to code</p>
+    </header>
+
+    <main class="container">
+      <!-- Summary Cards -->
+      <section class="summary-cards" aria-label="Pipeline summary">
+        <div class="card" id="card-total">
+          <span class="card-label">Total Pipeline</span>
+          <span class="card-value" id="total-value">$0</span>
+        </div>
+        <div class="card" id="card-deals">
+          <span class="card-label">Active Deals</span>
+          <span class="card-value" id="total-deals">0</span>
+        </div>
+        <div class="card" id="card-wins">
+          <span class="card-label">Closed Won</span>
+          <span class="card-value" id="closed-won">0</span>
+        </div>
+        <div class="card" id="card-winrate">
+          <span class="card-label">Win Rate</span>
+          <span class="card-value" id="win-rate">—</span>
+        </div>
+      </section>
+
+      <!-- Add Deal Form -->
+      <section class="add-deal-section">
+        <h2>Add a New Deal</h2>
+        <form id="deal-form" class="deal-form" novalidate>
+          <div class="form-group">
+            <label for="deal-name">Deal / Company Name</label>
+            <input
+              type="text"
+              id="deal-name"
+              placeholder="e.g. Acme Corp Q2"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-group">
+            <label for="deal-value">Deal Value ($)</label>
+            <input
+              type="number"
+              id="deal-value"
+              placeholder="e.g. 25000"
+              min="0"
+              step="1"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="deal-stage">Stage</label>
+            <select id="deal-stage">
+              <option value="Prospect">🔍 Prospect</option>
+              <option value="Qualified">✅ Qualified</option>
+              <option value="Proposal">📄 Proposal</option>
+              <option value="Closed Won">🏆 Closed Won</option>
+              <option value="Closed Lost">❌ Closed Lost</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="deal-notes">Notes (optional)</label>
+            <input
+              type="text"
+              id="deal-notes"
+              placeholder="e.g. Follow up Friday, budget approved"
+              autocomplete="off"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Add Deal</button>
+          <p class="form-error hidden" id="form-error">
+            Please fill in the deal name and value.
+          </p>
+        </form>
+      </section>
+
+      <!-- Pipeline Board -->
+      <section class="pipeline-section">
+        <h2>Your Pipeline</h2>
+        <div class="stage-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Prospect">Prospect</button>
+          <button class="filter-btn" data-filter="Qualified">Qualified</button>
+          <button class="filter-btn" data-filter="Proposal">Proposal</button>
+          <button class="filter-btn" data-filter="Closed Won">Won</button>
+          <button class="filter-btn" data-filter="Closed Lost">Lost</button>
+        </div>
+
+        <div id="deals-list" class="deals-list">
+          <p class="empty-state" id="empty-state">
+            No deals yet. Add your first deal above! 👆
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        🌱 Learning in public ·
+        <a
+          href="https://github.com/jane24zhou/saleslearnclaudecode"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View on GitHub</a
+        >
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
