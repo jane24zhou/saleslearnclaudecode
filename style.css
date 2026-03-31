@@ -951,3 +951,483 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== GitHub Workflow Simulation ===== */
+.workflow-simulator {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.workflow-scenario-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--pink-light) 100%);
+  border-radius: 15px;
+  border: 2px solid var(--gold);
+}
+
+.workflow-scenario-info h3 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--pink-dark);
+  margin-bottom: 0.5rem;
+}
+
+.workflow-scenario-info p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.workflow-steps-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.workflow-step-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-medium);
+  border: 3px solid var(--border-color);
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--gold);
+}
+
+.step-number {
+  font-weight: 600;
+  color: var(--blue-dark);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.step-action {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--pink-dark);
+  font-weight: 600;
+}
+
+.step-content {
+  margin-bottom: 2rem;
+}
+
+.step-description {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+.step-github-action,
+.step-terminal {
+  margin: 1.5rem 0;
+}
+
+.github-ui-mock {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.github-header {
+  background: linear-gradient(135deg, #24292f 0%, #1c2128 100%);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.github-form {
+  padding: 1.5rem;
+}
+
+.github-input,
+.github-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  background: white;
+}
+
+.github-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.github-btn {
+  background: linear-gradient(135deg, #2ea44f 0%, #26873e 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 164, 79, 0.4);
+}
+
+.github-btn.delete {
+  background: linear-gradient(135deg, #cf222e 0%, #a40e26 100%);
+}
+
+.pr-branches {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f6f8fa;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.branch-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: #ddf4ff;
+  color: #0969da;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.branch-badge.main {
+  background: #dafbe1;
+  color: #1a7f37;
+}
+
+.github-pr-review {
+  background: #f6f8fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.review-comment {
+  background: white;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-comment.approved {
+  border-color: #2ea44f;
+  background: #f0fff4;
+}
+
+.reviewer {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.github-pr-merged {
+  background: linear-gradient(135deg, #f0fff4 0%, #dafbe1 100%);
+  border: 2px solid #2ea44f;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.merge-badge {
+  display: inline-block;
+  background: #2ea44f;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.merge-details {
+  margin: 1rem 0;
+  color: var(--text-secondary);
+}
+
+.code-editor-mock {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.editor-header {
+  background: #252526;
+  color: #cccccc;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #3e3e42;
+  font-size: 0.9rem;
+}
+
+.code-content {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.5rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  overflow-x: auto;
+}
+
+.workflow-terminal {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.workflow-terminal .terminal-line {
+  margin-bottom: 0.5rem;
+}
+
+.workflow-terminal .terminal-prompt {
+  color: #4ec9b0;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.workflow-terminal .terminal-command {
+  color: #dcdcaa;
+}
+
+.workflow-terminal .terminal-output {
+  color: #ce9178;
+  white-space: pre-wrap;
+  display: block;
+  margin-left: 1rem;
+}
+
+.step-explanation {
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--pink-light) 100%);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--gold);
+  margin-top: 1.5rem;
+}
+
+.explanation-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.step-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.btn {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink-accent) 0%, var(--pink-dark) 100%);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--blue-medium) 0%, var(--blue-accent) 100%);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn:disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.workflow-progress-tracker {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--border-color);
+  position: sticky;
+  top: 2rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.workflow-progress-tracker h4 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--pink-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.75rem;
+}
+
+.progress-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.progress-step.completed {
+  background: linear-gradient(135deg, #dafbe1 0%, #c3f1d4 100%);
+  border: 1px solid #2ea44f;
+}
+
+.progress-step.active {
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-medium) 100%);
+  border: 2px solid var(--pink-dark);
+  box-shadow: var(--shadow-soft);
+}
+
+.progress-step.pending {
+  background: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  opacity: 0.6;
+}
+
+.progress-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.progress-step.completed .progress-step-number {
+  background: #2ea44f;
+  color: white;
+}
+
+.progress-step.active .progress-step-number {
+  background: var(--pink-dark);
+  color: white;
+}
+
+.progress-step.pending .progress-step-number {
+  background: #e0e0e0;
+  color: #999;
+}
+
+.progress-step-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.progress-step.pending .progress-step-label {
+  color: var(--text-secondary);
+}
+
+/* Responsive Design for Workflow */
+@media (max-width: 968px) {
+  .workflow-steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-progress-tracker {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+
+  .progress-steps {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .progress-step {
+    flex-direction: column;
+    min-width: 80px;
+    text-align: center;
+  }
+
+  .progress-step-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .workflow-step-card {
+    padding: 1.5rem;
+  }
+
+  .step-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .step-action {
+    font-size: 1.2rem;
+  }
+
+  .step-navigation {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+

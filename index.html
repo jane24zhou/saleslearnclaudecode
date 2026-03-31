@@ -20,6 +20,7 @@
     <button class="nav-btn active" data-section="flashcards">📚 Flashcards / 卡片</button>
     <button class="nav-btn" data-section="quiz">📝 Quiz / 测验</button>
     <button class="nav-btn" data-section="terminal">💻 Terminal / 终端</button>
+    <button class="nav-btn" data-section="github-workflow">🔄 GitHub Workflow / GitHub工作流</button>
     <button class="nav-btn" data-section="workflow">🚀 AI Workflow / 工作流</button>
     <button class="nav-btn" data-section="progress">📊 Progress / 进度</button>
   </nav>
@@ -113,6 +114,60 @@
               <li>help - Show all commands / 显示所有命令</li>
               <li>clear - Clear terminal / 清空终端</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Workflow Simulation Section -->
+    <section id="github-workflow-section" class="content-section">
+      <div class="section-header">
+        <h2>🔄 GitHub Workflow Simulation / GitHub工作流模拟</h2>
+        <p>Experience a real developer's daily workflow with GitHub / 体验真实开发者的GitHub日常工作流</p>
+      </div>
+
+      <div class="workflow-simulator">
+        <div class="workflow-scenario-info">
+          <h3 id="scenario-title">Building a New Feature / 构建新功能</h3>
+          <p id="scenario-description">Follow along as we build a new feature from start to finish / 从头到尾跟随我们构建一个新功能</p>
+        </div>
+
+        <div class="workflow-steps-container">
+          <div class="workflow-step-card" id="workflow-step-card">
+            <div class="step-header">
+              <span class="step-number" id="step-number">Step 1/10</span>
+              <span class="step-action" id="step-action">Creating an Issue</span>
+            </div>
+
+            <div class="step-content">
+              <div class="step-description" id="step-description">
+                <!-- Step description will be inserted here -->
+              </div>
+
+              <div class="step-github-action" id="step-github-action">
+                <!-- GitHub UI simulation will be inserted here -->
+              </div>
+
+              <div class="step-terminal" id="step-terminal" style="display: none;">
+                <!-- Terminal commands will be inserted here -->
+              </div>
+
+              <div class="step-explanation" id="step-explanation">
+                <!-- Explanation will be inserted here -->
+              </div>
+            </div>
+
+            <div class="step-navigation">
+              <button class="btn btn-secondary" id="prev-step-btn" disabled>← Previous / 上一步</button>
+              <button class="btn btn-primary" id="next-step-btn">Next / 下一步 →</button>
+            </div>
+          </div>
+
+          <div class="workflow-progress-tracker">
+            <h4>Workflow Progress / 工作流进度</h4>
+            <div class="progress-steps" id="progress-steps">
+              <!-- Progress indicators will be inserted here -->
+            </div>
           </div>
         </div>
       </div>
