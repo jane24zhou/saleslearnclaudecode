@@ -20,6 +20,26 @@ Welcome to the **GitHub Learning Journey** — a beautifully designed, interacti
 - Track your quiz scores and aim for 100%
 - Visual progress bar to see how far you've come
 
+### 🔄 Interactive GitHub Workflow Simulation
+Experience a complete developer workflow from start to finish with 11 interactive steps:
+1. **Create an Issue** - Track features and bugs
+2. **Clone Repository** - Get the code locally
+3. **Create a Branch** - Work safely on new features
+4. **Write Code** - Implement your changes
+5. **Check Status** - See what's changed
+6. **Stage & Commit** - Save your work with clear messages
+7. **Push to Remote** - Share your code with the team
+8. **Create Pull Request** - Request code review
+9. **Code Review** - Collaborate and improve
+10. **Merge & Deploy** - Ship your feature
+11. **Pull Latest Changes** - Stay in sync with the team
+
+Each step includes:
+- Real terminal commands and GitHub UI simulations
+- Explanations of when and why to use each action
+- Visual progress tracking
+- Bilingual support (English/Chinese)
+
 ### 🚀 Before & After AI Workflow Comparison
 See how AI transforms the developer experience with three real scenarios:
 - **Creating a Feature**: From 2 hours to 20 minutes
@@ -100,7 +120,10 @@ This platform covers essential GitHub concepts including:
 - Issues and project management
 - GitHub Actions automation
 
-Plus, you'll see **real before/after comparisons** showing how AI tools like Claude Code are revolutionizing development workflows!
+Plus, you'll experience:
+- **Step-by-step workflow simulation** showing when to use each GitHub feature
+- **Interactive terminal** to practice real Git commands
+- **Real before/after comparisons** showing how AI tools like Claude Code are revolutionizing development workflows!
 
 ## 💾 Progress Tracking
 
