@@ -212,6 +212,8 @@ body {
   color: var(--text-light);
   line-height: 1.5;
   margin-top: .25rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Hidden cards */

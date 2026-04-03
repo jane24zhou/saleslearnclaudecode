@@ -547,6 +547,8 @@ body {
   font-size: 0.95rem;
   line-height: 1.5;
   transition: transform 0.2s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .workflow-column.after .workflow-step {
@@ -1027,6 +1029,8 @@ body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-primary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .step-github-action,
@@ -1234,6 +1238,8 @@ body {
   line-height: 1.7;
   color: var(--text-primary);
   font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .step-navigation {
